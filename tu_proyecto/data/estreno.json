@@ -1,0 +1,18 @@
+[
+    {
+      "title": "Película 1",
+      "description": "Descripción de la película 1.",
+      "image_url": "https://path/to/image1.jpg"
+    },
+    {
+      "title": "Película 2",
+      "description": "Descripción de la película 2.",
+      "image_url": "https://path/to/image2.jpg"
+    },
+    {
+      "title": "Película 3",
+      "description": "Descripción de la película 3.",
+      "image_url": "https://path/to/image3.jpg"
+    }
+  ]
+  

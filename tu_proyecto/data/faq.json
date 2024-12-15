@@ -1,0 +1,42 @@
+[
+    {
+        "question": "¿Cómo puedo registrarme en el sitio?",
+        "answer": "Puedes registrarte desde la página de registro con tu nombre de usuario y contraseña."
+    },
+    {
+        "question": "¿Necesito una cuenta para ver las películas?",
+        "answer": "No, puedes ver las películas sin una cuenta. Sin embargo, para dejar comentarios o testimonios sí necesitas registrarte."
+    },
+    {
+        "question": "¿Cómo puedo cambiar mi contraseña?",
+        "answer": "Para cambiar tu contraseña, dirígete a la configuración de tu perfil y selecciona la opción de cambiar la contraseña."
+    },
+    {
+        "question": "¿Cómo puedo recomendar una película?",
+        "answer": "Puedes recomendar una película a través del formulario de recomendaciones disponible en la página principal."
+    },
+    {
+        "question": "¿Dónde puedo ver las últimas películas estrenadas?",
+        "answer": "En la página de 'Estrenos' podrás ver las últimas películas que están disponibles en los cines."
+    },
+    {
+        "question": "¿Qué géneros de películas puedo encontrar en la página?",
+        "answer": "Ofrecemos una amplia variedad de géneros como Acción, Aventura, Terror, Comedia, y más."
+    },
+    {
+        "question": "¿Puedo ver trailers de las películas?",
+        "answer": "Sí, cada película tiene un tráiler disponible en su página. Solo debes hacer clic en el enlace correspondiente."
+    },
+    {
+        "question": "¿Cómo puedo cerrar sesión?",
+        "answer": "Puedes cerrar sesión desde el menú en la parte superior derecha de la página."
+    },
+    {
+        "question": "¿Cómo se seleccionan las películas recomendadas?",
+        "answer": "Las películas recomendadas se seleccionan en base a géneros y popularidad, y se actualizan periódicamente."
+    },
+    {
+        "question": "¿Puedo dejar un testimonio en el sitio?",
+        "answer": "Sí, una vez que inicies sesión, podrás dejar un testimonio sobre tu experiencia en el sitio."
+    }
+]

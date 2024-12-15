@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Container to hold everything */
+.container {
+    position: relative;
+    height: 100%;
+}
+
+/* Background video styling */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Menu button styling */
+#menu-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Menu panel styling */
+#menu-panel {
+    display: none;
+    position: absolute;
+    top: 60px; /* Position just below the button */
+    left: 0; /* Make the menu align with the left edge of the screen */
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 20px;
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(-100%); /* Start hidden above the button */
+}
+
+/* Show menu panel when it's toggled */
+#menu-panel.show {
+    display: block;
+    transform: translateY(0); /* Slide down */
+}
+
+#menu-panel ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu-panel ul li {
+    padding: 15px;
+    text-align: left;
+    margin-bottom: 10px; /* Add space between buttons */
+}
+
+/* Styling for menu links (buttons) */
+#menu-panel ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px 20px; /* Button padding */
+}
+
+/* Hover effect for menu buttons */
+#menu-panel ul li a:hover {
+    background-color: #444;
+}
+
+/* Right panel with welcome and instructions */
+.right-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 350px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-panel h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.right-panel p {
+    font-size: 18px;
+}
+
+/* Footer styling */
+.welcome-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 16px;
+}

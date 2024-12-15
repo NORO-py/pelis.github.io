@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendaciones</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Recomendaciones para {{ genre }}</h1>
+    <div class="movie-list">
+        {% for movie in movies %}
+            <div class="movie-card">
+                <h2>{{ movie.title }}</h2>
+                <p>{{ movie.overview }}</p>
+                <button onclick="openTrailer('{{ movie.id }}')">Ver tráiler</button>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Modal para el tráiler -->
+    <div id="trailerModal" class="modal">
+        <div class="modal-content">
+            <iframe id="trailerVideo" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+            <button onclick="toggleFullscreen()">Agrandar/Reducir</button>
+            <button onclick="closeModal()">Cerrar</button>
+        </div>
+    </div>
+
+    <script>
+        function openTrailer(movieId) {
+            // Obtener la URL del tráiler para este ID
+            fetch(`/trailer/${movieId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.trailer_url) {
+                        document.getElementById('trailerVideo').src = data.trailer_url;
+                        document.getElementById('trailerModal').style.display = 'block';
+                    } else {
+                        alert('Tráiler no disponible');
+                    }
+                });
+        }
+
+        function closeModal() {
+            document.getElementById('trailerModal').style.display = 'none';
+            document.getElementById('trailerVideo').src = '';
+        }
+
+        function toggleFullscreen() {
+            const modalContent = document.querySelector('.modal-content');
+            if (modalContent.style.width === '100%') {
+                modalContent.style.width = '560px';
+                modalContent.style.height = '315px';
+            } else {
+                modalContent.style.width = '100%';
+                modalContent.style.height = '100%';
+            }
+        }
+    </script>
+</body>
+</html>

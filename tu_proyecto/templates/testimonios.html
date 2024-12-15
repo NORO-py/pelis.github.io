@@ -1,0 +1,19 @@
+<video autoplay muted loop id="background-video">
+    <source src="{{ url_for('static', filename='video/peliculas.mp4') }}" type="video/mp4">
+</video>
+<div>
+    <h1>Testimonios</h1>
+    {% if testimonies %}
+        <ul>
+            {% for testimonial, username in testimonies %}
+                <li><strong>{{ username }}</strong>: {{ testimonial }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay testimonios aún. ¡Sé el primero en dejar uno!</p>
+    {% endif %}
+    <form action="/testimonios" method="POST">
+        <textarea name="testimonial" placeholder="Escribe tu testimonio aquí..." required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</div>

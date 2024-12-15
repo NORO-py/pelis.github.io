@@ -1,0 +1,14 @@
+[
+    {
+        "tmdb_id": 603,
+        "trailer_url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+        "tmdb_id": 550,
+        "trailer_url": "https://www.youtube.com/embed/someVideoID"
+    },
+    {
+        "tmdb_id": 155,
+        "trailer_url": "https://www.youtube.com/embed/anotherVideoID"
+    }
+]

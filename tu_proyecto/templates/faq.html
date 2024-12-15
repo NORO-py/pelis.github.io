@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/faq.css') }}">
+</head>
+<body>
+    <!-- Fondo de video -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="{{ url_for('static', filename='video/peliculas.mp4') }}" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <div class="faq-section">
+            <h1>Preguntas Frecuentes</h1>
+            <div class="faq-list">
+                {% for faq in faqs %}
+                <div class="faq-item">
+                    <h2>{{ faq.question }}</h2>
+                    <p>{{ faq.answer }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

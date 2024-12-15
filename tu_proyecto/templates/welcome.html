@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Movie Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/welcome.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Background video -->
+        <video autoplay muted loop id="background-video">
+            <source src="{{ url_for('static', filename='video/peliculas.mp4') }}" type="video/mp4">
+        </video>
+
+        <!-- Menu button and menu panel -->
+        <button id="menu-btn">MENU</button>
+        <div id="menu-panel">
+            <ul>
+                <li><a href="/movies">Movies</a></li>
+                <li><a href="/estrenos">Últimos estrenos</a></li>
+                <li><a href="/populares">Géneros populares</a></li>
+                <li><a href="/testimonios">Testimonios</a></li>
+                <li><a href="/faq">FAQ</a></li>
+            </ul>
+        </div>
+
+        <!-- Right panel with welcome and instructions -->
+        <div class="right-panel">
+            <div class="welcome-header">
+                <h1>¡Bienvenido!</h1>
+            </div>
+            <div class="welcome-content">
+                <p>
+                    ¿Alguna vez has pasado más tiempo buscando una película que disfrutándola? 
+                    Este proyecto está diseñado para ayudarte a descubrir películas emocionantes de tus géneros favoritos.
+                </p>
+                <p>
+                    Con solo unos clics, puedes acceder a recomendaciones personalizadas basadas en los géneros que amas. 
+                    Además, puedes disfrutar de los tráileres directamente desde nuestra plataforma.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="welcome-footer">
+        <p>Creado por: <strong>Aparicio Agustín</strong></p>
+    </footer>
+
+    <script>
+        // Toggle the visibility of the menu panel when the button is clicked
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menuPanel = document.getElementById('menu-panel');
+            menuPanel.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
